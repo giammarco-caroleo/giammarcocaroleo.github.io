@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Giammarco Caroleo — portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Optional Google font (uncomment if you want) -->
+  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> -->
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav">
+      <a class="logo" href="/">G. Caroleo</a>
+      <button class="nav-toggle" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="hero" class="panel hero">
+      <div class="container">
+        <h1>Giammarco Caroleo</h1>
+        <p class="lead">DPhil student — Soft Robotics & sensing · University of Oxford</p>
+        <p><a class="cta" href="#about">About</a> <a class="cta ghost" href="#projects">Projects</a></p>
+      </div>
+    </section>
+
+    <section id="about" class="panel reveal">
+      <div class="container">
+        <h2>About</h2>
+        <p id="about-blurb">
+          <!-- About blurb pulled from your Oxford profile (editable). -->
+          Giammarco Caroleo is a DPhil student at the Oxford Robotics Institute working on tactile/visual sensing and robot self-awareness. <!-- replace/edit as you like -->
+        </p>
+      </div>
+    </section>
+
+    <section id="research" class="panel reveal">
+      <div class="container">
+        <h2>Research</h2>
+        <p>Selected topics: tactile gesture recognition, tiny LiDARs for manipulators, visuo-tactile representations. See publications below.</p>
+        <ul class="cards">
+          <li class="card"><strong>Estimating scene flow</strong><br/>(conference / preprint)</li>
+          <li class="card"><strong>Tiny LiDARs</strong><br/>(sensor characterization & localization)</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="projects" class="panel reveal">
+      <div class="container">
+        <h2>Projects</h2>
+        <article class="project">
+          <h3>Paper / Demo video</h3>
+          <p>Short description of the project. Replace with your text.</p>
+
+          <!-- YouTube embed (recommended for large videos) -->
+          <div class="video-wrap">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"
+              title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+          </div>
+
+          <!-- Local-hosted video (use if you want to keep it in /assets/) -->
+          <!--
+          <video controls width="720" preload="metadata">
+            <source src="assets/myvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          -->
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="panel reveal">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>Email: <a href="mailto:giammarcocaroleo@gmail.com">giammarcocaroleo@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/giammarco-caroleo" target="_blank">giammarco-caroleo</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Giammarco Caroleo</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
