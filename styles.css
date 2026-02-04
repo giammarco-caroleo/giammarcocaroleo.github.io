@@ -25,7 +25,7 @@ body{
   top:0;
   backdrop-filter:saturate(140%) blur(6px);
   z-index:40;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.88);
   border-bottom: 1px solid rgba(2,12,40,0.04);
 }
 .nav{
@@ -60,7 +60,7 @@ body{
 /* hero */
 .panel{padding:64px 1rem}
 .hero{
-  background:transparent;
+  background:transparent; /* no banner/background */
   color:var(--oxford);
   text-align:left;
   padding-top:48px;
@@ -68,26 +68,43 @@ body{
 }
 .hero-grid{
   display:grid;
-  grid-template-columns: 220px 1fr;
-  gap:28px;
+  grid-template-columns: auto 1fr;
+  gap:24px;
   align-items:center;
   padding:12px;
 }
+
+/* circular profile image, small */
 .profile-pic{
-  width:100%;
-  height:auto;
-  border-radius:12px;
+  width:110px;
+  height:110px;
+  border-radius:50%;
   object-fit:cover;
-  box-shadow: 0 10px 30px rgba(2,12,40,0.08);
-  border: 4px solid rgba(0,33,71,0.06);
+  box-shadow: 0 8px 24px rgba(2,12,40,0.08);
+  border: 3px solid rgba(0,33,71,0.06);
+  display:block;
 }
-.hero-right h1{
+
+/* hero text */
+.hero-name{
   margin:0;
-  font-size:clamp(1.6rem,3.5vw,2.4rem);
+  font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:700;
 }
-.lead{opacity:0.9;margin-top:8px;margin-bottom:12px}
+.hero-title{
+  margin:6px 0 0 0;
+  font-weight:600;
+  color:var(--blue-1);
+}
+.hero-group{
+  margin:6px 0 8px 0;
+  color:var(--muted);
+  font-size:0.95rem;
+}
+
+.lead{opacity:0.92;margin-top:10px;margin-bottom:12px}
 .hero-buttons{margin-top:12px}
-.cta{display:inline-block;margin-top:0;padding:0.5rem 0.9rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
+.cta{display:inline-block;margin-top:0;padding:0.45rem 0.85rem;border-radius:8px;background:var(--accent);color:white;text-decoration:none}
 .cta.ghost{background:transparent;border:1px solid rgba(3,19,43,0.08);margin-left:0.5rem;color:var(--oxford)}
 
 /* content layout */
@@ -108,13 +125,13 @@ iframe,video{width:100%;border-radius:8px}
 
 /* small screens */
 @media (max-width:860px){
-  .hero-grid{grid-template-columns: 140px 1fr; gap:16px}
   .panel{padding:36px 1rem}
+  .hero-grid{grid-template-columns: 100px 1fr; gap:14px}
 }
 @media (max-width:640px){
   .nav-links{display:none}
-  .hero-grid{grid-template-columns: 1fr; text-align:center}
+  .hero-grid{grid-template-columns: 1fr; text-align:center; justify-items:center}
   .hero-right{text-align:center}
-  .profile-pic{max-width:260px;margin:0 auto}
+  .profile-pic{max-width:140px;margin:0 auto}
   .lead{font-size:0.98rem}
 }

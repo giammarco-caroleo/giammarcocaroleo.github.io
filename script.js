@@ -16,7 +16,6 @@ reveals.forEach(r=>io.observe(r));
 // Smooth scroll for internal links
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
   a.addEventListener('click', (e) => {
-    // keep normal behavior for top-of-page link if needed
     const href = a.getAttribute('href');
     if (href && href.startsWith('#')) {
       const target = document.querySelector(href);
