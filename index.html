@@ -7,19 +7,6 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <!-- <header class="site-header">
-    <nav class="nav">
-      <div class="brand">Giammarco Caroleo</div>
-      <ul class="nav-links">
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#research">Research</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="publications.html">Publications</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-      </ul>
-    </nav>
-  </header> -->
-
   <main>
     <section id="hero" class="panel hero">
       <div class="container hero-grid">
@@ -32,13 +19,14 @@
           <p class="hero-title">DPhil student — Soft Robotics & Sensing</p>
           <p class="hero-group">Oxford Robotics Institute, University of Oxford</p>
 
-          <p class="lead">I work on tactile and visual sensing, robot self-awareness, and sensor design for manipulation.</p>
+          <p class="lead">
+            I work on tactile and visual sensing, robot self-awareness, and sensor design for manipulation.
+          </p>
 
           <p class="hero-buttons">
-            <a class="cta" href="index.html#about">About</a>
-            <a class="cta " href="index.html#research">Research</a>
-            <a class="cta " href="publications.html">Publications</a>
-            <a class="cta " href="index.html#contact">Contacts</a>
+            <a class="cta" href="#research">Research</a>
+            <a class="cta" href="publications.html">Publications</a>
+            <a class="cta" href="#contact">Contacts</a>
           </p>
         </div>
       </div>
@@ -47,7 +35,7 @@
     <section id="about" class="panel reveal">
       <div class="container">
         <h2>About</h2>
-        <p id="about-blurb">
+        <p>
           Giammarco Caroleo is a DPhil student at the Oxford Robotics Institute working on tactile and visual sensing and robot self-awareness.
         </p>
       </div>
@@ -56,7 +44,60 @@
     <section id="research" class="panel reveal">
       <div class="container">
         <h2>Research</h2>
-        <p>Selected topics: tactile gesture recognition, tiny LiDARs for manipulators, visuo-tactile representations. See publications below.</p>
+        <p>
+          Selected topics: tactile gesture recognition, tiny LiDARs for manipulators,
+          visuo-tactile representations.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- FEATURED: video left, info right -->
+    <section id="projects" class="panel reveal">
+      <div class="container">
+        <h2>Featured demo</h2>
+
+        <div class="feature-grid">
+          <!-- LEFT: video area -->
+          <div class="feature-video">
+            <!-- Replace VIDEO_ID with real id (or leave as placeholder) -->
+            <iframe id="featured-video" 
+                    src="https://www.youtube.com/embed/9Dkpwom_K7k?autoplay=1&mute=1&loop=1"
+                    title="Featured demo video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen>
+            </iframe>
+
+            <div class="video-fallback" id="video-fallback" aria-hidden="true">
+              <div class="video-fallback-inner">
+                <strong>VIDEO PLACEHOLDER</strong>
+                <div class="video-fallback-text">Replace <code>VIDEO_ID</code> in the iframe <code>src</code> with the YouTube id from SRL@Oxford.</div>
+                <div class="video-fallback-hint">If the video errors after adding a valid id, embedding may be disabled for that upload — open the video on YouTube instead.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT: title, description, paper link -->
+          <div class="feature-info">
+            <h3 class="paper-title">Paper title placeholder — <span class="paper-year">2025</span></h3>
+
+            <p class="paper-authors"><em>G. Caroleo, A. Albini, P. Maiolino</em></p>
+
+            <p class="paper-abstract">
+              Short description / abstract placeholder. Replace this with a 2–3 sentence summary of the paper’s goals, methods, and key result so visitors can quickly understand the demo.
+            </p>
+
+            <p class="paper-links">
+              <a class="link-button" href="https://arxiv.org/abs/VIDEO_ID" target="_blank" rel="noopener">Read paper (arXiv)</a>
+              <a class="link-button ghost" href="https://www.youtube.com/watch?v=9Dkpwom_K7k" target="_blank" rel="noopener">Open video on YouTube</a>
+            </p>
+
+            <p class="paper-notes">
+              Tip: for autoplay in this small view, set `autoplay=1&mute=1` in the iframe query (muted autoplay is required by browsers).
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -68,6 +109,9 @@
       </div>
     </section>
   </main>
+
+  <!-- Controlled fading transition pane -->
+  <section class="bottom-spacer"></section>
 
   <footer class="site-footer">
     <div class="container">© <span id="year"></span> Giammarco Caroleo</div>
