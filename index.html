@@ -5,28 +5,25 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Giammarco Caroleo — portfolio</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Optional Google font (uncomment if you want) -->
-  <!-- <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet"> -->
 </head>
 <body>
-  <header class="site-header">
+  <!-- <header class="site-header">
     <nav class="nav">
       <div class="brand">Giammarco Caroleo</div>
       <ul class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#research">Research</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#research">Research</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="publications.html">Publications</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
       </ul>
     </nav>
-  </header>
+  </header> -->
 
   <main>
-    <!-- HERO with circular picture (left) and info (right) -->
     <section id="hero" class="panel hero">
       <div class="container hero-grid">
         <div class="hero-left">
-          <!-- Replace with your image in assets/profile.jpg -->
           <img src="assets/profile.jpg" alt="Giammarco Caroleo" class="profile-pic" />
         </div>
 
@@ -35,11 +32,13 @@
           <p class="hero-title">DPhil student — Soft Robotics & Sensing</p>
           <p class="hero-group">Oxford Robotics Institute, University of Oxford</p>
 
-          <p class="lead">I work on tactile and visual sensing, robot self-awareness, and sensor design for manipulation. <!-- edit as you like --></p>
+          <p class="lead">I work on tactile and visual sensing, robot self-awareness, and sensor design for manipulation.</p>
 
           <p class="hero-buttons">
-            <a class="cta" href="#about">About</a>
-            <a class="cta ghost" href="#projects">Projects</a>
+            <a class="cta" href="index.html#about">About</a>
+            <a class="cta " href="index.html#research">Research</a>
+            <a class="cta " href="publications.html">Publications</a>
+            <a class="cta " href="index.html#contact">Contacts</a>
           </p>
         </div>
       </div>
@@ -49,7 +48,7 @@
       <div class="container">
         <h2>About</h2>
         <p id="about-blurb">
-          Giammarco Caroleo is a DPhil student at the Oxford Robotics Institute working on tactile and visual sensing and robot self-awareness. <!-- edit as you like -->
+          Giammarco Caroleo is a DPhil student at the Oxford Robotics Institute working on tactile and visual sensing and robot self-awareness.
         </p>
       </div>
     </section>
@@ -58,34 +57,6 @@
       <div class="container">
         <h2>Research</h2>
         <p>Selected topics: tactile gesture recognition, tiny LiDARs for manipulators, visuo-tactile representations. See publications below.</p>
-        <ul class="cards">
-          <li class="card"><strong>Estimating scene flow</strong><br/>(conference / preprint)</li>
-          <li class="card"><strong>Tiny LiDARs</strong><br/>(sensor characterization & localization)</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="projects" class="panel reveal">
-      <div class="container">
-        <h2>Projects</h2>
-        <article class="project">
-          <h3>Paper / Demo video</h3>
-          <p>Short description of the project. Replace with your text.</p>
-
-          <!-- YouTube embed (recommended for large videos) -->
-          <div class="video-wrap">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"
-              title="YouTube video player" frameborder="0" allowfullscreen></iframe>
-          </div>
-
-          <!-- Local-hosted video (use if you want to keep it in /assets/) -->
-          <!--
-          <video controls width="720" preload="metadata">
-            <source src="assets/myvideo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-          </video>
-          -->
-        </article>
       </div>
     </section>
 
