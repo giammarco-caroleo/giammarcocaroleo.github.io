@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://giammarco-caroleo.github.io/sitemap.xml
