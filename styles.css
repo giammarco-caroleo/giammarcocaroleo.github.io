@@ -1,3 +1,4 @@
+
 :root{
   --oxford:#002147;
   --blue-1:#0b3d91;
@@ -7,6 +8,29 @@
   --font-sans: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 
   --transition-height: 25vh;
+}
+
+/* ===== FORCE: make pub headings normal and only bold Caroleo, G. ===== */
+
+/* Ensure h3 in publication entries is normal weight (override defaults/other rules) */
+.pub h3,
+ul.pub-list > li.pub h3 {
+  font-weight: 400 !important;
+  font-style: normal !important;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+/* Make sure <em> remains styled as you prefer (title emphasis) */
+.pub h3 em {
+  font-style: italic;
+  font-weight: 500 !important; /* a touch stronger than normal but not full-bold */
+}
+
+/* Force only <strong> inside pub h3 to be bold */
+.pub h3 strong {
+  font-weight: 700 !important;
+  font-style: normal !important;
 }
 
 /* base */
@@ -60,6 +84,15 @@ body{
   border-radius:8px;
   display:block;
 }
+.feature-video {
+  padding: 6px;
+  background: linear-gradient(
+    180deg,
+    rgba(11,61,145,0.06),
+    rgba(11,61,145,0.02)
+  );
+  border-radius: 14px;
+}
 .video-fallback{
   position:absolute; inset:0; display:none; align-items:center; justify-content:center;
   background:linear-gradient(180deg, rgba(3,19,43,0.02), rgba(59,130,246,0.02));
@@ -84,6 +117,13 @@ body{
 .feature-info .paper-title{margin:0 0 6px 0;font-size:1.1rem}
 .paper-authors{margin:0 0 8px 0;color:var(--muted)}
 .paper-abstract{color:var(--oxford);margin-bottom:14px}
+.paper-abstract {
+  font-size: 1.03rem;
+}
+
+.lead {
+  font-size: 1.05rem;
+}
 .paper-links{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:8px}
 .link-button{background:transparent;border:1px solid rgba(2,12,40,0.08);padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--oxford)}
 .link-button:hover{background:rgba(3,19,43,0.04)}
@@ -118,3 +158,24 @@ body{
 
 /* footer ribbon */
 .site-footer{height:30px;display:flex;align-items:center;justify-content:center;color:var(--muted);border-top:1px solid rgba(2,12,40,0.04)}
+
+.demo iframe {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  box-shadow: 0 14px 32px rgba(2,12,40,0.10);
+}
+
+.demo {
+  margin: 18px 0;   /* was ~28px */
+}
+
+.panel { padding: 28px 1rem; }
+
+.demo { margin: 18px 0; }
+
+.paper-abstract { font-size: 1.03rem; }
+
+.demo iframe {
+  box-shadow: 0 14px 32px rgba(2,12,40,0.10);
+}

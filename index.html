@@ -5,9 +5,47 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Giammarco Caroleo — portfolio</title>
   <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* ===== spacing tweaks ===== */
+    /* reduce global vertical whitespace a bit for better density */
+    .panel { padding: 32px 1rem; }         /* was 48px -> now 32px */
+    .panel.compact { padding: 16px 1rem; } /* compact cards and highlights */
+
+    /* hero tweaks you've been using already */
+    .hero-grid { grid-template-columns: 180px 1fr; }
+    .profile-pic { width:160px; height:160px; }
+
+    /* demo layout (keeps previous behaviour) */
+    .demo { margin: 20px 0; display:grid; grid-template-columns: 340px 1fr; gap:20px; align-items:start; }
+    .demo iframe { width:100%; aspect-ratio:16/9; border-radius:8px; display:block; }
+
+    /* ===== Beyond the Lab: card grid ===== */
+    .cards { display:grid; grid-template-columns: repeat(auto-fit,minmax(240px,1fr)); gap:16px; margin-top:12px; }
+    .card {
+      background: #fff;
+      border: 1px solid rgba(3,19,43,0.04);
+      border-radius: 10px;
+      padding: 14px;
+      box-shadow: 0 4px 18px rgba(2,12,40,0.03);
+      min-height: 120px;
+      display:flex;
+      flex-direction:column;
+      gap:8px;
+    }
+    .card h4 { margin:0; font-size:1rem; color:var(--blue-1); display:flex; align-items:center; gap:8px; }
+    .card p { margin:0; color:var(--muted); font-size:0.95rem; }
+    .card ul { margin:6px 0 0 18px; padding:0; color:var(--oxford); }
+    .card a { color:var(--blue-1); text-decoration:underline; }
+    .small-meta { font-size:0.85rem; color:var(--muted); }
+
+    /* small responsive tweak */
+    @media (max-width:900px){ .demo{grid-template-columns:1fr; } .hero-grid{grid-template-columns: 1fr;} .profile-pic{width:140px;height:140px} .cards{grid-template-columns:1fr} }
+  </style>
 </head>
 <body>
   <main>
+
+    <!-- HERO -->
     <section id="hero" class="panel hero">
       <div class="container hero-grid">
         <div class="hero-left">
@@ -16,101 +54,199 @@
 
         <div class="hero-right">
           <h1 class="hero-name">Giammarco Caroleo</h1>
-          <p class="hero-title">DPhil student — Soft Robotics & Sensing</p>
+          <p class="hero-title">PhD Student — Engineering Science</p>
           <p class="hero-group">Oxford Robotics Institute, University of Oxford</p>
 
           <p class="lead">
-            I work on tactile and visual sensing, robot self-awareness, and sensor design for manipulation.
+            I develop distributed proximity and tactile perception strategies and sensor-driven control for manipulators, with a focus on safe, robust behaviour in cluttered and dynamic environments.
           </p>
 
-          <p class="hero-buttons">
-            <a class="cta" href="#research">Research</a>
-            <a class="cta" href="publications.html">Publications</a>
-            <a class="cta" href="#contact">Contacts</a>
-          </p>
+          <!-- optional buttons removed for compactness -->
         </div>
       </div>
     </section>
 
+    <!-- ABOUT (expanded and paraphrased from your cover letter & CV) -->
     <section id="about" class="panel reveal">
       <div class="container">
         <h2>About</h2>
+
         <p>
-          Giammarco Caroleo is a DPhil student at the Oxford Robotics Institute working on tactile and visual sensing and robot self-awareness.
+          Soon-to-be Doctor of Engineering Science at the University of Oxford (Oxford Robotics Institute), I integrate sensing, perception and control for real robotic systems. My work spans hardware (miniaturized Time-of-Flight sensors and tactile skins integration), perception (scene flow, visuo-tactile embeddings, SLAM), and control (task-priority controllers, tactile/proximity-driven reactive policies).
+        </p>
+
+        <p style="margin-top:10px;">
+          My PhD is fully supported by an EPSRC DTP studentship. Prior experience includes industry traineeships at Siemens NV (Leuven, Belgium) and a research fellowship at the University of Calabria (Cosenza, Italy) within the Mechanical Engineering Department. I enjoy connecting research to broader audiences through demos and outreach (see highlights below).
         </p>
       </div>
     </section>
 
+    <!-- RESEARCH HIGHLIGHTS (your four demos already present) -->
     <section id="research" class="panel reveal">
       <div class="container">
-        <h2>Research</h2>
-        <p>
-          Selected topics: tactile gesture recognition, tiny LiDARs for manipulators,
-          visuo-tactile representations.
-        </p>
+        <h2>Research Highlights</h2>
+        <p>Here's a list of selected projects; video demos on the left, short description and relative links on the right. For a full list of publications, please visit the <a href="publications.html">Publications</a> page.</p>
+
+        <!-- Tiny LiDARs -->
+        <div class="demo" id="tiny-lidars">
+          <div class="feature-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/9Dkpwom_K7k?start=129&autoplay=1&mute=1&loop=1&playlist=9Dkpwom_K7k&playsinline=1"
+                    title="Tiny LiDARs demo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="feature-info">
+            <h3 class="paper-title"><em>Tiny LiDARs for Manipulator Self-Awareness</em></h3>
+            <p class="paper-authors"><strong>Caroleo, G.</strong>, Albini, A., De Martini, D., Barfoot, T.D., Maiolino, P.</p>
+            <p class="paper-abstract">In this work we use miniaturized Time-of-Flight sensors mounted on a manipulator to localize objects in its surroundings. We present sensor characterization, a probabilistic sensor model, and initial localization experiments validating the approach.</p>
+            <p class="paper-links small-meta">
+              <a href="https://arxiv.org/abs/2503.03449" target="_blank" rel="noopener">Paper</a> •
+              <a href="https://www.youtube.com/watch?v=9Dkpwom_K7k" target="_blank" rel="noopener">YouTube demo</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Scene Flow -->
+        <div class="demo" id="scene-flow">
+          <div class="feature-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/gdum9Ku_0Kc?start=34&autoplay=1&mute=1&loop=1&playlist=gdum9Ku_0Kc&playsinline=1"
+                    title="Scene flow demo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="feature-info">
+            <h3 class="paper-title"><em>Estimating Scene Flow with Distributed Tiny LiDARs</em></h3>
+            <p class="paper-authors">Sander, J., <strong>Caroleo, G.</strong>, Albini, A., Maiolino, P.</p>
+            <p class="paper-abstract"></p>We use distributed miniaturized Time-of-Flight sensors to estimate scene flow in the robot’s surroundings, enabling fast motion inference from sparse, noisy range signals. This is useful for collision avoidance and responsive control in dynamic scenes.</p>
+            <p class="paper-links small-meta">
+              <a href="https://arxiv.org/abs/2504.02439" target="_blank" rel="noopener">Paper</a> •
+              <a href="https://www.youtube.com/watch?v=gdum9Ku_0Kc" target="_blank" rel="noopener">YouTube demo</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Proxy-Tactile -->
+        <div class="demo" id="proxy-tactile">
+          <div class="feature-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/tDSgtnjQeWE?start=15&autoplay=1&mute=1&loop=1&playlist=tDSgtnjQeWE&playsinline=1"
+                    title="Proxy-tactile demo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="feature-info">
+            <h3 class="paper-title"><em>A Proxy–Tactile Reactive Control for Robots Moving in Clutter</em></h3>
+            <p class="paper-authors"><strong>Caroleo, G.</strong>, Giovinazzo, F., Albini, A., Grella, F., Cannata, G., Maiolino, P.</p>
+            <p class="paper-abstract"> This work introduces a proxy-tactile controller that lets robots move safely in clutter by reacting both to proximity and tactile feedback — fear no more, your robot can now navigate complex environments with confidence.</p>
+            <p class="paper-links small-meta">
+              <a href="https://ieeexplore.ieee.org/iel8/10801246/10801290/10802341.pdf" target="_blank" rel="noopener">Paper</a> •
+              <a href="https://www.youtube.com/watch?v=tDSgtnjQeWE" target="_blank" rel="noopener">YouTube demo</a>
+            </p>
+          </div>
+        </div>
+
+        <!-- Cross-Task Visuo-Tactile -->
+        <div class="demo" id="cross-task">
+          <div class="feature-video">
+            <iframe src="https://www.youtube-nocookie.com/embed/x4upy0vsRCY?start=130&autoplay=1&mute=1&loop=1&playlist=x4upy0vsRCY&playsinline=1"
+                    title="Cross-task visuo-tactile demo" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+          <div class="feature-info">
+            <h3 class="paper-title"><em>Cross-Task Visuo–Tactile Representation using Point Clouds</em></h3>
+            <p class="paper-authors"><strong>Caroleo, G.</strong>, Albini, A., Maiolino, P.</p>
+            <p class="paper-abstract">We present an augmented point-cloud representation that fuses vision and physical properties and can be used across tasks. A simple yet effective way to combine visual and tactile information in an interpretable unified representation.</p>
+            <p class="paper-links small-meta">
+              <a href="https://link.springer.com/article/10.1007/s11370-025-00628-8" target="_blank" rel="noopener">Paper</a> •
+              <a href="https://www.youtube.com/watch?v=x4upy0vsRCY" target="_blank" rel="noopener">YouTube demo</a>
+            </p>
+          </div>
+        </div>
+
       </div>
     </section>
 
-
-    <!-- FEATURED: video left, info right -->
-    <section id="projects" class="panel reveal">
+    <!-- BEYOND THE LAB (compact card grid to reduce white space and add personality) -->
+    <section id="beyond" class="panel compact reveal">
       <div class="container">
-        <h2>Featured demo</h2>
+        <h2>Beyond the Lab</h2>
+        <p>Selected outreach, talks, and personal interests.</p>
 
-        <div class="feature-grid">
-          <!-- LEFT: video area -->
-          <div class="feature-video">
-            <!-- Replace VIDEO_ID with real id (or leave as placeholder) -->
-            <iframe id="featured-video" 
-                    src="https://www.youtube.com/embed/9Dkpwom_K7k?autoplay=1&mute=1&loop=1"
-                    title="Featured demo video"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen>
-            </iframe>
+        <div class="cards">
 
-            <div class="video-fallback" id="video-fallback" aria-hidden="true">
-              <div class="video-fallback-inner">
-                <strong>VIDEO PLACEHOLDER</strong>
-                <div class="video-fallback-text">Replace <code>VIDEO_ID</code> in the iframe <code>src</code> with the YouTube id from SRL@Oxford.</div>
-                <div class="video-fallback-hint">If the video errors after adding a valid id, embedding may be disabled for that upload — open the video on YouTube instead.</div>
-              </div>
-            </div>
+          <!-- Outreach / Public engagement -->
+          <div class="card">
+            <h4>📣 Outreach & public engagement</h4>
+            <p class="small-meta">Selected appearances and demos.</p>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=6pW0bNc8LHM&t=5s" target="_blank" rel="noopener">SestoSenso - Use Case 1 (involving CRF (Stellantis) and University of Genova)</a></li>
+              <li><a href="https://www.youtube.com/watch?v=B3IeRplsYXw&t=3084s" target="_blank" rel="noopener">2023 Royal Institution Christmas Lectures (BBC) — contribution</a></li>
+              <li><a href="https://eng.ox.ac.uk/news/oxford-s-chancellor-visits-oxford-robotics-institute-to-explore-cutting-edge-research" target="_blank" rel="noopener">Demoed for the University of Oxford Chancellor</a></li>
+            </ul>
           </div>
 
-          <!-- RIGHT: title, description, paper link -->
-          <div class="feature-info">
-            <h3 class="paper-title">Paper title placeholder — <span class="paper-year">2025</span></h3>
+          <!-- Talks / Presentations -->
+          <div class="card">
+            <h4>🎤 Talks & presentations</h4>
+            <p class="small-meta">Selected conference presentations.</p>
+            <ul>
+              <li><a href="https://www.youtube.com/watch?v=1beHNYFuopU&t=2794s" target="_blank" rel="noopener">Estimating Scene Flow — presentation</a></li>
+              <li><a href="https://www.youtube.com/watch?v=lPLfmFjgOro&t=1500s" target="_blank" rel="noopener">Improving Tactile Gesture Recognition — presentation</a></li>
+            </ul>
+          </div>
 
-            <p class="paper-authors"><em>G. Caroleo, A. Albini, P. Maiolino</em></p>
+          <!-- Interests / Other highlights -->
+          <div class="card">
+            <h4>⚡ Interests & highlights</h4>
+            <p class="small-meta">What I do outside research.</p>
+            <ul>
+              <li>Electric guitar enthusiast — playing for 18+ years</li>
+              <li>Oxford college rowing competitor — winner in 8+ campaigns</li>
+              <li>Cinema enthusiast</li>
+            </ul>
+          </div>
 
-            <p class="paper-abstract">
-              Short description / abstract placeholder. Replace this with a 2–3 sentence summary of the paper’s goals, methods, and key result so visitors can quickly understand the demo.
-            </p>
+        </div>
+      </div>
+    </section>
 
-            <p class="paper-links">
-              <a class="link-button" href="https://arxiv.org/abs/VIDEO_ID" target="_blank" rel="noopener">Read paper (arXiv)</a>
-              <a class="link-button ghost" href="https://www.youtube.com/watch?v=9Dkpwom_K7k" target="_blank" rel="noopener">Open video on YouTube</a>
-            </p>
+    <!-- CONTACT (reshuffled into cards with short intros) -->
+    <section id="contact" class="panel reveal">
+      <div class="container">
+        <h2>Contacts</h2>
 
-            <p class="paper-notes">
-              Tip: for autoplay in this small view, set `autoplay=1&mute=1` in the iframe query (muted autoplay is required by browsers).
-            </p>
+        <div class="cards" style="margin-top:12px;">
+          <div class="card">
+            <h4>✉️ Personal Email</h4>
+            <p class="small-meta">Best for informal messages and quick notes.</p>
+            <p style="margin-top:8px"><a href="mailto:giammarcocaroleo@gmail.com">giammarcocaroleo@gmail.com</a></p>
+          </div>
+
+          <div class="card">
+            <h4>🏛️ University Email</h4>
+            <p class="small-meta">For academic or collaboration enquiries.</p>
+            <p style="margin-top:8px"><a href="mailto:giammarco@oxfordrobotics.institute">giammarco@oxfordrobotics.institute</a></p>
+          </div>
+
+          <div class="card">
+            <h4>🔗 LinkedIn</h4>
+            <p class="small-meta">Latest activities and outreach — follow for updates.</p>
+            <p style="margin-top:8px"><a href="https://www.linkedin.com/in/giammarco-caroleo-a4304818b/?locale=en_US" target="_blank" rel="noopener">giammarco-caroleo</a></p>
+          </div>
+
+          <div class="card">
+            <h4>🏷️ ORI profile</h4>
+            <p class="small-meta">Official Oxford Robotics Institute profile and lab page.</p>
+            <p style="margin-top:8px"><a href="https://ori.ox.ac.uk/people/giammarco-caroleo" target="_blank" rel="noopener">ori.ox.ac.uk/people/giammarco-caroleo/</a></p>
+          </div>
+
+          <div class="card">
+            <h4>💻 GitHub</h4>
+            <p class="small-meta">Code, demos and materials.</p>
+            <p style="margin-top:8px"><a href="https://github.com/giammarco-caroleo" target="_blank" rel="noopener">giammarco-caroleo</a></p>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="panel reveal">
-      <div class="container">
-        <h2>Contact</h2>
-        <p>Email: <a href="mailto:giammarco.caroleo@somewhere.ox.ac.uk">giammarco.caroleo@...ox.ac.uk</a></p>
-        <p>GitHub: <a href="https://github.com/giammarco-caroleo" target="_blank">giammarco-caroleo</a></p>
-      </div>
-    </section>
   </main>
 
-  <!-- Controlled fading transition pane -->
   <section class="bottom-spacer"></section>
 
   <footer class="site-footer">

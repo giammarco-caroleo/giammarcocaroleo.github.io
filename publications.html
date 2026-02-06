@@ -24,114 +24,115 @@
     <section class="panel">
       <div class="container">
         <h2>Publications</h2>
-        <p>Below are my papers (editable). Each entry includes a paper link and a YouTube embed placeholder — replace the video ID with the SRL@Oxford / SRL channel upload ID if available.</p>
+        <p>Accepted works, preprints and journal articles presented in a chronological order.</p>
 
-        <div class="pub-list">
+        <!-- bullet list -->
+        <ul class="pub-list">
 
-          <!-- 1 -->
-          <article class="pub">
-            <h3>Numerical and experimental performance estimation for a ExoFing — 2 DOFs finger exoskeleton</h3>
-            <p><em>G. Carbone, M. Ceccarelli, C.E. Capalbo, G. Caroleo, C. Morales-Cruz</em> — Robotica (2022)</p>
-            <p><a href="https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Numerical+and+experimental+performance+estimation+for+a+ExoFing&btnG=" target="_blank">Google Scholar / publisher</a></p>
+          <!-- 6: Maric et al. (under review) -->
+          <li class="pub card">
+            <h3>Maric, A., <strong>Caroleo, G.</strong>, Albini, A., Maiolino, P., Calinon, S. — <em>“Diffusion-based Inverse Model of a Distributed Tactile Sensor for Object Pose Estimation”</em></h3>
+            <p class="pub-meta">Currently on arXiv.</p>
 
-            <!-- optional video (replace VIDEO_ID) -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="ExoFing demo" frameborder="0" allowfullscreen></iframe></div> -->
+            <p class="pub-blurb">We propose a diffusion-based inverse model that turns distributed tactile signals into object pose estimates. The approach emphasizes generality and real-world robustness for skin-like sensor arrays.</p>
+            <p><a href="https://arxiv.org/pdf/2601.13250" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+          <!-- 1: Tiny LiDARs (IROS 2025) -->
+          <li class="pub card">
+            <h3><strong>Caroleo, G.</strong>, Albini, A., De Martini, D., Barfoot, T.D., Maiolino, P. — <em>“Tiny LiDARs for Manipulator Self-Awareness: Sensor Characterization and Initial Localization Experiments”</em></h3>
+            <p class="pub-meta">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2025).</p>
 
-          <!-- 2 -->
-          <article class="pub">
-            <h3>A multiphysics dynamic model for shape memory alloy actuators</h3>
-            <p><em>S. Rodino, G. Caroleo, E. Sgambitterra, F. Bruno, M. Muzzupappa, C. Maletta</em> — Sensors and Actuators A: Physical (2023)</p>
-            <p><a href="https://scholar.google.com/scholar?q=A+multiphyics+dynamic+model+for+shape+memory+alloy+actuators" target="_blank">Google Scholar / publisher</a></p>
+            <p class="pub-blurb">This work shows how miniaturized, low-cost Time-of-Flight sensors mounted on manipulators provide enough information to localize objects in manipulators surroundings. A preliminary sensor characterization is presented along with a probabilistic sensor model.</p>
+            <p><a href="https://arxiv.org/pdf/2503.03449" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="SMA actuators" frameborder="0" allowfullscreen></iframe></div> -->
+          <!-- 2: Scene Flow (RO-MAN 2025) -->
+          <li class="pub card">
+            <h3>Sander<span style="opacity:0.9">*</span>, J., <strong>Caroleo, G.</strong><span style="opacity:0.9">*</span>, Albini, A., Maiolino, P. — <em>“Estimating Scene Flow in Robot Surroundings with Distributed Miniaturized Time-of-Flight Sensors”</em></h3>
+            <p class="pub-meta">2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN).</p>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+            <p class="pub-blurb">We exploit distributed miniaturized Time-of-Flight sensors to estimate scene flow around robots, enabling fast motion understanding in dynamic environments and paving the way for responsive, motion-aware behaviors.</p>
+            <p><a href="https://arxiv.org/pdf/2504.02439" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-          <!-- 3 -->
-          <article class="pub">
-            <h3>A Proxy-Tactile Reactive Control for Robots Moving in Clutter</h3>
-            <p><em>G. Caroleo, F. Giovinazzo, A. Albini, F. Grella, G. Cannata, P. Maiolino</em> — IROS / conference (2024)</p>
-            <p><a href="https://ieeexplore.ieee.org/document/10802341" target="_blank">Paper / IEEE</a></p>
+          <!-- 9: Zhong et al. (RO-MAN 2025) -->
+          <li class="pub card">
+            <h3>Zhong, S., Albini, A., <strong>Caroleo, G.</strong>, Maiolino, P. — <em>“Improving Tactile Gesture Recognition with Optical Flow”</em></h3>
+            <p class="pub-meta">2025 34th IEEE International Conference on Robot and Human Interactive Communication (RO-MAN), (pp. 2246-2252).</p>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Proxy-tactile demo" frameborder="0" allowfullscreen></iframe></div> -->
+            <p class="pub-blurb">Applying optical-flow to tactile images, this paper boosts gesture recognition accuracy by turning spatiotemporal tactile patterns into motion-like features — a compact trick with big practical gains for touch-based interfaces.</p>
+            <p><a href="https://ieeexplore.ieee.org/iel8/11217544/11217526/11217777.pdf" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+          <!-- 4: Visuo–Tactile Representation (Intelligent Service Robotics 2025) -->
+          <li class="pub card">
+            <h3><strong>Caroleo, G.</strong>, Albini, A., Maiolino, P. — <em>“A Cross-Task Visuo–Tactile Representation using Point Clouds”</em></h3>
+            <p class="pub-meta">Intelligent Service Robotics (2025), pp. 1-13. </p>
 
-          <!-- 4 -->
-          <article class="pub">
-            <h3>Soft Robot Localization Using Distributed Miniaturized Time-of-Flight Sensors</h3>
-            <p><em>G. Caroleo, A. Albini, P. Maiolino</em> — arXiv (2025)</p>
-            <p><a href="https://arxiv.org/abs/2502.01228" target="_blank">arXiv:2502.01228</a></p>
+            <p class="pub-blurb">We present an augmented point-cloud representation that fuses vision and physical properties and can be used across tasks. A simple yet effective way to combine visual and tactile information in an interpretable unified representation.</p>
+            <p><a href="https://link.springer.com/article/10.1007/s11370-025-00628-8" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Soft robot localization" frameborder="0" allowfullscreen></iframe></div> -->
+          <!-- 5: Soft Robot Localization (RoboSoft 2025) -->
+          <li class="pub card">
+            <h3><strong>Caroleo, G.</strong>, Albini, A., Maiolino, P. — <em>“Soft Robot Localization Using Distributed Miniaturized Time-of-Flight Sensors”</em></h3>
+            <p class="pub-meta">IEEE 8th International Conference on Soft Robotics (RoboSoft 2025), pp. 1–6. IEEE.</p>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+            <p class="pub-blurb">We placed miniaturized Time-of-Flight sensors on a soft robot to localize itself in the environment, opening practical routes to continuum robots that can operate reliably in the real world.</p>
+            <p><a href="https://ieeexplore.ieee.org/iel8/11020754/11020808/11020858.pdf" target="_blank" rel="noopener">Paper link </a></p>
+          </li>
 
-          <!-- 5 -->
-          <article class="pub">
-            <h3>Tiny LiDARs for Manipulator Self-Awareness: Sensor characterization and initial localization experiments</h3>
-            <p><em>G. Caroleo, A. Albini, D. De Martini, T.D. Barfoot, P. Maiolino</em> — arXiv (2025)</p>
-            <p><a href="https://arxiv.org/abs/2503.03449" target="_blank">arXiv:2503.03449</a></p>
+          <!-- 7: Maric et al. (RSS workshop 2025) -->
+          <li class="pub card">
+            <h3>Maric, A., Jankowski, J., <strong>Caroleo, G.</strong>, Albini, A., Maiolino, P., Calinon, S. — <em>“Diffusion-based Inverse Observation Model for Artificial Skin”</em></h3>
+            <p class="pub-meta">Accepted to Robotics: Science and Systems 2025 workshop — Navigating Contact Dynamics in Robotics.</p>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Tiny LiDARs demo" frameborder="0" allowfullscreen></iframe></div> -->
+            <p class="pub-blurb">We propose a diffusion-based observation model that maps skin-like sensory responses back to contact pose and pressure — a step towards tactile skins that reliably interpret complex contacts in unstructured settings.</p>
+            <p><a href="https://arxiv.org/pdf/2506.13986" target="_blank" rel="noopener">Workshop paper link</a></p>
+          </li>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+          <!-- 3: Proxy-Tactile Reactive Control (IROS 2024) -->
+          <li class="pub card">
+            <h3><strong>Caroleo, G.</strong><span style="opacity:0.9">*</span>, Giovinazzo<span style="opacity:0.9">*</span>, F., Albini, A., Grella, F., Cannata, G., Maiolino, P. — <em>“A Proxy–Tactile Reactive Control for Robots Moving in Clutter”</em></h3>
+            <p class="pub-meta">IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS 2024), pp. 733–739. IEEE.</p>
 
-          <!-- 6 -->
-          <article class="pub">
-            <h3>Estimating Scene Flow in Robot Surroundings with Distributed Miniaturized Time-of-Flight Sensors</h3>
-            <p><em>J. Sander, G. Caroleo, A. Albini, P. Maiolino</em> — arXiv (2025)</p>
-            <p><a href="https://ar5iv.labs.arxiv.org/html/2504.02439" target="_blank">arXiv:2504.02439</a></p>
+            <p class="pub-blurb">This work introduces a proxy-tactile controller that lets robots move safely in clutter by reacting both to proximity and tactile feedback — fear no more, your robot can now navigate complex environments with confidence.</p>
+            <p><a href="https://ieeexplore.ieee.org/iel8/10801246/10801290/10802341.pdf" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Scene flow demo" frameborder="0" allowfullscreen></iframe></div> -->
+          <li class="pub card">
+            <h3>Rodino, S., <strong>Caroleo, G.</strong>, Sgambitterra, E., Bruno, F., Muzzupappa, M., Maletta, C. — <em>“A multiphysics dynamic model for shape memory alloy actuators”</em></h3>
+            <p class="pub-meta">Sensors and Actuators A: Physical, 2023.</p>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+            <p class="pub-blurb">A rigorous multiphysics model that captures the thermal, mechanical and phase-change dynamics of SMA actuators — useful for design, control, and predicting real-world actuator behavior.</p>
+            <p><a href="https://www.sciencedirect.com/science/article/pii/S092442472300451X" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
+        
+          <li class="pub card">
+            <h3>Carbone, G., Ceccarelli, M., Capalbo, C. E., <strong>Caroleo, G.</strong>, Morales-Cruz, C. — <em>“Numerical and experimental performance estimation for a ExoFing-2 DOFs finger exoskeleton”</em></h3>
+            <p class="pub-meta">Robotica, 2022.</p>
 
-          <!-- 7 -->
-          <article class="pub">
-            <h3>A Cross-Task Visuo-Tactile Representation Using Point Clouds</h3>
-            <p><em>G. Caroleo, A. Albini, P. Maiolino</em> — Intelligent Service Robotics (2025)</p>
-            <p><a href="https://eng.ox.ac.uk/publications?personId=23163" target="_blank">Publisher / university listing</a></p>
+            <p class="pub-blurb">Combining simulation and lab experiments, this paper quantifies the performance of a compact finger exoskeleton — important for prosthetics and assistive grasping systems.</p>
+            <p><a href="https://search.proquest.com/openview/ec1415e0dcea235420558e2cbd258484/1?pq-origsite=gscholar&cbl=37292" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-            <!-- optional video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Visuo-tactile demo" frameborder="0" allowfullscreen></iframe></div> -->
+          <li class="pub card">
+            <h3>Morales-Cruz, C., Capalbo, C. E., <strong>Caroleo, G.</strong>, Ceccarelli, M., Carbone, G. — <em>“Numerical and experimental validation of ExoFing, a finger exoskeleton”</em></h3>
+            <p class="pub-meta">European Conference on Mechanism Science, 2020.</p>
 
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
+            <p class="pub-blurb">A foundational validation of the ExoFing concept, pairing numerical models with experimental tests to show feasibility for precision finger assistance and rehabilitation devices.</p>
+            <p><a href="https://www.researchgate.net/profile/Marco-Ceccarelli/publication/343783866_Numerical_and_Experimental_Validation_of_ExoFing_a_Finger_Exoskeleton/links/5f817d36299bf1b53e1b9d37/Numerical-and-Experimental-Validation-of-ExoFing-a-Finger-Exoskeleton.pdf" target="_blank" rel="noopener">Paper link</a></p>
+          </li>
 
-          <!-- 8 (example placeholder for other preprints / future work) -->
-          <article class="pub">
-            <h3>Improving Tactile Gesture Recognition with Optical Flow</h3>
-            <p><em>S. Zhong, A. Albini, G. Caroleo, G. Cannata, P. Maiolino</em> — arXiv / preprint (2025)</p>
-            <p><a href="#" target="_blank">link / DOI / arXiv</a></p>
-
-            <!-- optionally add a video -->
-            <!-- <div class="video-wrap"><iframe src="https://www.youtube.com/embed/VIDEO_ID" title="Gesture recognition demo" frameborder="0" allowfullscreen></iframe></div> -->
-
-            <p class="pub-blurb">Short blurb about the paper — replace this text.</p>
-          </article>
-
-        </div> <!-- .pub-list -->
+        </ul> <!-- .pub-list -->
       </div>
     </section>
   </main>
- <!-- SAME controlled fading transition pane -->
+
   <section class="bottom-spacer"></section>
 
-    <footer class="site-footer">
+  <footer class="site-footer">
     <div class="container">© <span id="year"></span> Giammarco Caroleo</div>
   </footer>
 
